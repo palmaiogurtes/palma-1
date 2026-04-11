@@ -1,0 +1,827 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, user-scalable=yes">
+  <meta name="theme-color" content="#9B2C2C">
+  <link rel="icon" href="./IMG/PALMA-Sfundo.png">
+  <title>Palma Iogurtes — Qualidade que se Sente</title>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="./style/index.css">
+
+</head>
+
+<body>
+
+  <nav class="barra-navegacao">
+    <div class="area-logo" id="gatilhoLogoInicio">
+      <div class="imagem-logo"><img src="./IMG/PALMA-Sfundo.png" alt="Palma Iogurtes"
+          onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%2244%22 height=%2244%22%3E%3Crect width=%2244%22 height=%2244%22 fill=%22%239B2C2C%22/%3E%3Ctext x=%2250%%22 y=%2250%%22 text-anchor=%22middle%22 dy=%22.3em%22 fill=%22white%22 font-size=%2218%22%3EP%3C/text%3E%3C/svg%3E'">
+      </div>
+      <span class="texto-marca">Palma Iogurtes</span>
+    </div>
+    <button class="botao-menu" id="botaoMenu" aria-label="Menu">☰</button>
+    <ul class="lista-links-nav" id="listaLinksNav">
+      <li><a href="#" data-pagina="inicio" class="link-nav pagina-ativa">Início</a></li>
+      <li><a href="#" data-pagina="produto" class="link-nav">Produto</a></li>
+      <li><a href="#" data-pagina="comunidade" class="link-nav">Opiniões</a></li>
+      <li><a href="#" data-pagina="pedidos" class="link-nav">Encomendar</a></li>
+      <li><a href="#" data-pagina="sobre" class="link-nav">História</a></li>
+    </ul>
+    <a href="#" class="botao-encomendar-nav" data-pagina="pedidos">Pedir agora</a>
+  </nav>
+
+  <!-- INÍCIO -->
+  <div id="inicio-page" class="pagina pagina-ativa">
+    <section class="secao-hero">
+      <div class="coluna-esquerda-hero">
+        <div class="etiqueta-secao">Produção artesanal angolana</div>
+        <h1>Iogurtes que a <span style="color:var(--vinho);">família</span> confia há geração</h1>
+        <p style="margin: 1rem 0; color: #5A6B7A;">Ingredientes puros, tradição e frescor em cada colher.</p>
+        <div style="display:flex; gap:0.8rem; flex-wrap:wrap;">
+          <a href="#" class="botao botao-principal" data-pagina="produto">Ver o nosso iogurte</a>
+          <a href="#" class="botao botao-contorno" data-pagina="comunidade">Ver Opiniões</a>
+        </div>
+        <div class="linha-estatisticas">
+          <div class="cartao-estatistica">
+            <div class="numero-estatistica" id="totalAvaliacoes">0</div>
+            <div>avaliações</div>
+          </div>
+          <div class="cartao-estatistica">
+            <div class="numero-estatistica" id="mediaAvaliacoes">0</div>
+            <div>média geral</div>
+          </div>
+          <div class="cartao-estatistica">
+            <div class="numero-estatistica">01+</div>
+            <div>anos</div>
+          </div>
+        </div>
+      </div>
+      <div class="coluna-direita-hero">
+        <div class="moldura-imagem-hero">
+          <div class="caixa-imagem-hero"><img src="./IMG/palma24.jpeg" alt="Palma Iogurtes"
+              onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22180%22 height=%22180%22%3E%3Ccircle cx=%2290%22 cy=%2290%22 r=%2275%22 fill=%22%23FBE9E9%22 stroke=%22%239B2C2C%22 stroke-width=%221.2%22/%3E%3Ctext x=%2250%%22 y=%2250%%22 text-anchor=%22middle%22 dy=%22.3em%22 fill=%22%239B2C2C%22 font-size=%2224%22%3EPALMA%3C/text%3E%3C/svg%3E'">
+          </div>
+        </div>
+      </div>
+    </section>
+    <section style="padding:2rem 5%; background:white;">
+      <div style="text-align:center;"><span class="etiqueta-secao">O nosso produto</span>
+        <h2 style="font-size:1.9rem;">Palma Iogurtes</h2>
+        <p style="color:var(--pedra); margin-bottom:1rem;">Sabores da época, frescos e naturais</p>
+      </div>
+      <div class="cartao-produto-unico">
+        <div class="area-imagem-produto"><span class="etiqueta-destaque">⭐ Safra atual</span><img class="foto-produto"
+            src="./IMG/copo_individual.jpeg" alt="Iogurte"
+            onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22480%22 height=%22260%22%3E%3Crect width=%22480%22 height=%22260%22 fill=%22%23FBE9E9%22/%3E%3Ctext x=%2250%%22 y=%2245%%22 text-anchor=%22middle%22 dy=%22.3em%22 fill=%22%239B2C2C%22 font-size=%2222%22%3EIogurte%3C/text%3E%3C/svg%3E'">
+        </div>
+        <div class="conteudo-cartao">
+          <h3>Iogurte em Copo Individual</h3>
+          <p style="color:var(--pedra);">Sabores da estação: Manga • Banana • Maracujá</p>
+          <div class="estrelas-avaliacao">★★★★★</div>
+          <div class="preco-produto">1.000 Kz <span>/ unidade</span></div>
+          <div style="display:flex; gap:0.8rem; margin-top:1rem;"><a href="#" class="botao botao-principal"
+              data-pagina="produto">Personalizar sabor</a><a href="#" class="botao botao-contorno"
+              data-pagina="pedidos">Encomendar</a></div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- PRODUTO -->
+  <div id="produto-page" class="pagina">
+    <section style="padding:2rem 5%;">
+      <div style="text-align:center;"><span class="etiqueta-secao">Coleção Palma</span>
+        <h2 style="font-size:2rem;">Palma Iogurte</h2>
+        <p style="color:var(--pedra);">Feito com ingredientes naturais, sem corantes artificiais</p>
+      </div>
+      <div class="cartao-produto-unico" style="max-width:520px;">
+        <div class="area-imagem-produto"><span class="etiqueta-destaque">⭐ Tradicional</span><img class="foto-produto"
+            src="./IMG/palma_preco.jpeg" alt="500ml"
+            onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22520%22 height=%22300%22%3E%3Crect width=%22520%22 height=%22300%22 fill=%22%23FBE9E9%22/%3E%3Ctext x=%2250%%22 y=%2242%%22 text-anchor=%22middle%22 dy=%22.3em%22 fill=%22%239B2C2C%22%3EIogurte%3C/text%3E%3C/svg%3E'">
+        </div>
+        <div class="conteudo-cartao">
+          <h3>Iogurte — 500 ml</h3>
+          <div class="preco-produto">3.500 Kz <span>/ unidade</span></div>
+          <button class="botao botao-principal" data-pagina="pedidos" style="width:100%;">Encomendar agora</button>
+        </div>
+      </div>
+      <div class="cartao-produto-unico" style="max-width:520px;">
+        <div class="area-imagem-produto"><span class="etiqueta-destaque">⭐ Partilha em Família</span><img
+            class="foto-produto" src="./IMG/palma_1000ml.jpeg" alt="1000ml"
+            onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22520%22 height=%22300%22%3E%3Crect width=%22520%22 height=%22300%22 fill=%22%23FBE9E9%22/%3E%3Ctext x=%2250%%22 y=%2250%%22 text-anchor=%22middle%22%3E1000ml%3C/text%3E%3C/svg%3E'">
+        </div>
+        <div class="conteudo-cartao">
+          <h3>Iogurte — 1000 ml</h3>
+          <div class="preco-produto">6.500 Kz <span>/ unidade</span></div>
+          <button class="botao botao-principal" data-pagina="pedidos" style="width:100%;">Encomendar agora</button>
+        </div>
+      </div>
+      <div class="cartao-produto-unico" style="max-width:520px;">
+        <div class="area-imagem-produto"><span class="etiqueta-destaque">⭐ Prático</span><img class="foto-produto"
+            src="./IMG/copo_individual.jpeg" alt="Copo Individual"
+            onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22520%22 height=%22300%22%3E%3Crect width=%22520%22 height=%22300%22 fill=%22%23FBE9E9%22/%3E%3Ctext x=%2250%%22 y=%2250%%22 text-anchor=%22middle%22%3ECopo%3C/text%3E%3C/svg%3E'">
+        </div>
+        <div class="conteudo-cartao">
+          <h3>Iogurte — Individual</h3>
+          <div class="preco-produto">1.000 Kz <span>/ unidade</span></div>
+          <button class="botao botao-principal" data-pagina="pedidos" style="width:100%;">Encomendar agora</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="secao-personalizador">
+      <div class="titulo-personalizador">
+        <span class="etiqueta-secao">Respeito à Natureza</span>
+        <h2>Sabores da época em Angola</h2>
+        <p>Cada fruta tem o seu momento ideal. Selecionamos apenas as disponíveis na colheita actual.</p>
+      </div>
+      <div class="aviso-safra" id="avisoSafra">🌿 Época de frutas tropicais — Manga, Maracujá e Banana no auge!</div>
+      <div class="grelha-sabores" id="grelha-de-sabores"></div>
+      <div class="resumo-selecao" id="resumo-selecao-sabor"><span> Escolha os sabores disponíveis na época e pode juntar
+          a vontade</span>
+      </div>
+      <div style="text-align:center;"><button class="botao botao-principal" id="botaoEncomendarPersonalizado">Encomendar
+          com estes sabores →</button></div>
+    </section>
+  </div>
+
+  <!-- COMUNIDADE -->
+  <div id="comunidade-page" class="pagina">
+    <section style="padding:2rem 5%;">
+      <div class="layout-duas-colunas">
+        <div class="formulario-elegante">
+          <h3 style="font-family:'Cormorant Garamond';">Partilhe a sua experiência</h3>
+          <div class="linha-campo"><label>Nome completo *</label><input type="text" id="campoNomeOpiniao"
+              placeholder="Ex: Maria João"></div>
+          <div class="linha-campo"><label>Cidade</label><input type="text" id="campoCidadeOpiniao"
+              placeholder="Luanda, Benguela..."></div>
+          <div class="linha-campo"><label>Produto avaliado</label><input type="text" id="campoProdutoOpiniao"
+              placeholder="Iogurte de Manga, Goiaba...">
+          </div>
+          <div class="linha-campo"><label>Avaliação</label>
+            <div class="area-estrelas" id="widgetEstrelas"></div>
+          </div>
+          <div class="linha-campo"><label>Comentário *</label><textarea id="campoComentarioOpiniao" rows="3"
+              placeholder="Conte a sua experiência..."></textarea></div><button class="botao botao-principal"
+            id="botaoPublicarOpiniao" style="width:100%;">Publicar opinião</button>
+        </div>
+        <div>
+          <div style="display:flex; justify-content:space-between;">
+            <h3>Opiniões reais</h3><span id="contadorOpinioes" style="font-size:0.8rem;">0 opiniões</span>
+          </div>
+          <div class="lista-opinioes" id="feedOpinioes">
+            <div class="estado-carregando">A carregar opiniões...</div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- PEDIDOS - COM BOTÃO WHATSAPP ELEGANTE -->
+  <div id="pedidos-page" class="pagina">
+    <section style="padding:2rem 5%; background:#FEFAF4;">
+      <div class="layout-duas-colunas">
+        <div>
+          <span class="etiqueta-secao">Encomenda rápida</span>
+          <h2>Pedidos por WhatsApp</h2>
+          <div class="vitrine-estatisticas">
+            <div class="cartao-estatistica-ouro">
+              <div class="numero-estatistica">+2.500</div>
+              <div>entregas realizadas</div>
+            </div>
+            <div class="cartao-estatistica-ouro">
+              <div class="numero-estatistica">⚡</div>
+              <div>resposta rápida</div>
+            </div>
+          </div>
+        </div>
+        <div class="formulario-elegante">
+          <h3>Formulário de pedido</h3>
+          <div class="linha-campo">
+            <label>Nome completo *</label>
+            <input id="campoNomePedido" placeholder="Seu nome" required>
+          </div>
+          <div class="linha-campo">
+            <label>WhatsApp *</label>
+            <input id="campTelefonePedido" placeholder="+244 9XX XXX XXX" required>
+          </div>
+          <div class="linha-campo">
+            <label>Cidade / Bairro</label>
+            <input id="campoCidadePedido" placeholder="Luanda, Talatona..." required>
+          </div>
+          <div class="linha-campo">
+            <label>Produto</label>
+            <select id="campoProdutoPedido">
+              <option>Iogurte de Copo individual</option>
+              <option>Iogurte de 1000 ml</option>
+              <option>Iogurte de 500 ml</option>
+            </select>
+          </div>
+          <div class="linha-campo">
+            <label>Sabores pretendidos</label>
+            <input id="campoSaboresPedido" placeholder="Ex: Manga, Banana...">
+          </div>
+          <div class="linha-campo">
+            <label>Quantidade</label>
+            <input id="campoQuantidadePedido" placeholder="Ex: 12 unidades">
+          </div>
+          <div class="linha-campo">
+            <label>Observações</label>
+            <textarea id="campoObservacoesPedido" rows="2" placeholder="Alguma preferência especial?"></textarea>
+          </div>
+
+          <!-- ✅ BOTÃO WHATSAPP SUPER ELEGANTE -->
+          <button class="botao-whatsapp-elegante" id="botaoEnviarPedido">
+            <svg class="icone-wa" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z" />
+            </svg>
+            <span> Enviar polo WhatsApp</span>
+            <span class="badge-wa">⚡ Rápido</span>
+          </button>
+
+          <p class="nota-formulario">O seu pedido será enviado para +244 939 190 649</p>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- SOBRE -->
+  <div id="sobre-page" class="pagina">
+    <section class="secao-sobre">
+      <div class="container-sobre">
+
+        <!-- Coluna da História (Texto Estilizado) -->
+        <div class="coluna-historia">
+          <span class="etiqueta-secao">Tradição & Inovação</span>
+          <h2 class="titulo-historia">A História da Palma</h2>
+
+          <div class="texto-historia">
+            <p class="paragrafo-destaque">A Palma Iogurtes nasceu de uma necessidade real, cuidar da saúde de quem
+              amamos.
+            </p>
+
+            <p>Durante uma temporada no Japão, Sebastião Florentino (Esposo da Senhora Palma) enfrentou problemas de
+              refluxo gástrico.
+              Como parte das recomendações médicas, passou a incluir o iogurte natural na sua alimentação diária,
+              especialmente pelas
+              manhãs. No entanto, já em Luanda, o elevado custo do iogurte tornava difícil manter esse hábito essencial.
+            </p>
+
+            <p>Foi então que surgiu uma solução dentro de casa.</p>
+
+            <p>A sua esposa, Dona Palma, com dedicação e conhecimento, decidiu preparar iogurte de forma artesanal. O
+              que
+              começou como
+              um gesto de cuidado rapidamente revelou algo especial: um iogurte natural, cremoso, equilibrado e feito
+              com
+              amor.</p>
+
+            <p>Ao provar, Sebastião percebeu que aquilo não podia ser apenas para consumo próprio. A qualidade era tão
+              boa
+              que merecia
+              ser partilhada.</p>
+
+            <p class="paragrafo-frase">Assim nasceu a Palma Iogurtes.</p>
+
+            <p>Mais do que uma marca, somos o resultado de uma história de superação, cuidado e compromisso com o
+              bem-estar. Cada copo
+              de iogurte que produzimos carrega a mesma intenção com que tudo começou: promover saúde, de forma natural
+              e
+              acessível.</p>
+
+            <p>Hoje, continuamos a crescer, mantendo a essência que nos define, produzir com qualidade, servir com amor
+              e
+              levar
+              bem-estar a cada família.</p>
+
+            <p class="paragrafo-assinatura">Palma Iogurtes, nasceu do cuidado, feito para si.</p>
+          </div>
+
+          <div class="vitrine-estatisticas">
+            <div class="cartao-estatistica-ouro">
+              <div class="numero-estatistica">100%</div>
+              <div>Ingredientes Naturais</div>
+            </div>
+            <div class="cartao-estatistica-ouro">
+              <div class="numero-estatistica">⭐ 8.9</div>
+              <div>Satisfação do Cliente</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- CARROSSEL DE IMAGENS (NOVO DESIGN) -->
+        <div class="coluna-carrossel">
+          <div class="carrossel-sobre">
+            <div class="moldura-carrossel">
+              <div class="area-imagem-carrossel" id="carrosselImagem">
+                <img src="./IMG/palma_22.jpeg" alt="Criadores Palma" id="imgCriador">
+              </div>
+            </div>
+            <div class="controles-carrossel">
+              <div class="indicadores-carrossel" id="indicadoresCarrossel"></div>
+              <p class="legenda-carrossel" id="legendaCarrossel">Os rostos por trás do sabor.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+  </div>
+  <footer class="rodape-principal">
+    <div class="conteudo-rodape">
+
+      <!-- Marca + redes sociais -->
+      <div class="coluna-rodape">
+        <h4>Palma Iogurtes</h4>
+        <p>Feito em Angola com dedicação e carinho.</p>
+        <div class="area-redes-sociais">
+          <a href="https://www.instagram.com/palma_iogurte2?igsh=dWZlaXJoenp0aHpp" target="_blank" rel="noopener"
+            class="link-rede-social" title="Instagram @palmaiogurtes">
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+            </svg>
+          </a>
+          <a href="https://www.tiktok.com/@palmaiogurte2?_r=1&_t=ZS-95OvIcxuhkK" target="_blank" rel="noopener"
+            class="link-rede-social" title="TikTok @palmaiogurtes">
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.69a8.18 8.18 0 004.78 1.52V6.77a4.85 4.85 0 01-1.01-.08z" />
+            </svg>
+          </a>
+          <a href="https://wa.me/244939190649" target="_blank" rel="noopener" class="link-rede-social" title="WhatsApp">
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z" />
+            </svg>
+          </a>
+        </div>
+        <p style="font-size:0.72rem; margin-top:0.5rem; opacity:0.5;">@palmaiogurtes</p>
+      </div>
+
+      <div class="coluna-rodape">
+        <h4>Contacto</h4>
+        <address>
+          +244 939 190 649<br>
+          palmaiogurtes@gmail.com
+        </address>
+      </div>
+
+      <div class="coluna-rodape">
+        <h4>Horário</h4>
+        <p>Sábado a Sábado<br>8h00 — 19h00</p>
+      </div>
+
+      <div class="coluna-rodape">
+        <h4>Navegar</h4>
+        <p>
+          <a href="#" data-pagina="inicio"
+            style="color:rgba(255,245,235,0.7); text-decoration:none; display:block; line-height:2;">Início</a>
+          <a href="#" data-pagina="produto"
+            style="color:rgba(255,245,235,0.7); text-decoration:none; display:block; line-height:2;">Produto</a>
+          <a href="#" data-pagina="pedidos"
+            style="color:rgba(255,245,235,0.7); text-decoration:none; display:block; line-height:2;">Encomendar</a>
+          <a href="#" data-pagina="sobre"
+            style="color:rgba(255,245,235,0.7); text-decoration:none; display:block; line-height:2;">História</a>
+        </p>
+      </div>
+
+    </div>
+    <hr class="divisor-rodape">
+    <p class="copyright-rodape">© 2025 Palma Iogurtes — Qualidade que se sente.</p>
+  </footer>
+
+  <script type="module">
+    // ========== PROTEÇÃO DE CÓDIGO FONTE ==========
+    (function () {
+      // 1. Bloquear clique direito
+      document.addEventListener('contextmenu', function (e) {
+        e.preventDefault();
+        return false;
+      });
+
+      // 2. Bloquear teclas de atalho
+      document.addEventListener('keydown', function (e) {
+        // F12
+        if (e.key === 'F12' || e.keyCode === 123) {
+          e.preventDefault();
+          return false;
+        }
+        // Ctrl+U (Ver fonte)
+        if ((e.ctrlKey || e.metaKey) && (e.key === 'u' || e.keyCode === 85)) {
+          e.preventDefault();
+          return false;
+        }
+        // Ctrl+Shift+I (DevTools)
+        if ((e.ctrlKey || e.metaKey) && (e.shiftKey) && (e.key === 'I' || e.keyCode === 73)) {
+          e.preventDefault();
+          return false;
+        }
+        // Ctrl+Shift+C (Inspecionar)
+        if ((e.ctrlKey || e.metaKey) && (e.shiftKey) && (e.key === 'C' || e.keyCode === 67)) {
+          e.preventDefault();
+          return false;
+        }
+        // Ctrl+Shift+J (Console)
+        if ((e.ctrlKey || e.metaKey) && (e.shiftKey) && (e.key === 'J' || e.keyCode === 74)) {
+          e.preventDefault();
+          return false;
+        }
+        // Ctrl+S (Salvar página)
+        if ((e.ctrlKey || e.metaKey) && (e.key === 's' || e.keyCode === 83)) {
+          e.preventDefault();
+          return false;
+        }
+      });
+
+      // 3. Detectar abertura do DevTools (monitorando resize)
+      let devToolsOpen = false;
+      const element = new Image();
+
+      Object.defineProperty(element, 'id', {
+        get: function () {
+          devToolsOpen = true;
+          window.location.reload(); // Recarrega se DevTools for aberto
+        }
+      });
+
+      setInterval(function () {
+        devToolsOpen = false;
+        console.log(element);
+        console.clear();
+        if (devToolsOpen) {
+          window.location.reload();
+        }
+      }, 1000);
+
+      // 4. Prevenir drag and drop de imagens (opcional)
+      document.querySelectorAll('img').forEach(img => {
+        img.addEventListener('dragstart', (e) => e.preventDefault());
+        img.addEventListener('contextmenu', (e) => e.preventDefault());
+      });
+    })();
+
+    // ========== SEU CÓDIGO ORIGINAL CONTINUA ABAIXO ==========
+    // ... (todo o seu código existente vem aqui)
+
+    // ========== CONFIGURAÇÃO DO SUPABASE ==========
+    const SUPABASE_URL = 'https://ahigtazuegcybpvwrgjg.supabase.co';
+    const SUPABASE_ANON_KEY = 'sb_publishable_VhdCEr0zsxymJntlLCAs2Q_LtC_eJqC';
+
+    import { createClient } from 'https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/+esm';
+    const supabase = createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
+
+    // ========== CÁLCULO DE ANOS DESDE A FUNDAÇÃO (2025) ==========
+    function calcularAnosPalma() {
+      const anoFundacao = 2025;
+      const anoAtual = new Date().getFullYear();
+      const mesAtual = new Date().getMonth();
+      const diaAtual = new Date().getDate();
+
+      let anosPassados = anoAtual - anoFundacao;
+
+      // Se ainda não completou o ano (considerando 1 de Janeiro)
+      if (mesAtual < 0 || (mesAtual === 0 && diaAtual < 1)) {
+        anosPassados--;
+      }
+
+      return anosPassados >= 0 ? anosPassados : 0;
+    }
+
+    function atualizarContagemAnos() {
+      const elementoAnos = document.getElementById('contagemAnos');
+      if (elementoAnos) {
+        const anos = calcularAnosPalma();
+        elementoAnos.innerText = anos + '+';
+      }
+    }
+
+    // ========== SISTEMA DE ÉPOCAS E SABORES ==========
+    const mesAtual = new Date().getMonth();
+    const disponibilidadeFrutas = {
+      'Manga': [8, 9, 10, 11, 0, 1],
+      'Banana': [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11],
+      'Morango': [5, 6, 7, 8],
+      'Ananás': [9, 10, 11, 0, 1, 2],
+      'Maracujá': [8, 9, 10, 11, 0, 1, 2],
+      'Goiaba': [2, 3, 4, 5, 6],
+      'Laranja': [4, 5, 6, 7, 8, 9],
+      'Só Iogurte Natural': [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11],
+      'Uva': [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11],
+      'kiwi': [0, 1, 2, 3],
+      'Chia': [11, 10, 7, 8]
+
+    };
+
+    const saboresLista = [
+      // Sabores Tradicionais
+      { nome: 'Manga', emoji: '🥭', epoca: 'Set a Fev' },
+      { nome: 'Banana', emoji: '🍌', epoca: 'Todo o ano' },
+      { nome: 'Morango', emoji: '🍓', epoca: 'Jun a Set' },
+      { nome: 'Maracujá', emoji: '🟡', epoca: 'Set a Abr' },
+      { nome: 'Goiaba', emoji: '🫐', epoca: 'Mar a Jul' },
+      { nome: 'Kiwi', emoji: '🥝', epoca: 'Jan a Abr' },
+
+      { nome: 'Só Iogurte Natural', emoji: '🥛', epoca: 'Sempre' },
+      { nome: 'Chia', emoji: '🫘', epoca: 'Nov a Dez e Jon a Jul' },
+
+      // Novos Sabores
+      { nome: 'Iogurte com Granola', emoji: '🥣', epoca: 'Sempre' },
+      { nome: 'Coco + Mel', emoji: '🥥🍯', epoca: 'Sempre' },
+      { nome: 'Chocolate', emoji: '🍫', epoca: 'Sempre' },
+      { nome: 'Amendoim', emoji: '🥜', epoca: 'Sempre' },
+      { nome: 'Fitness (Aveia + Frutas)', emoji: '💪', epoca: 'Sempre' },
+      { nome: 'Super Palma (Especial)', emoji: '👑', epoca: 'Sempre' },
+      { nome: 'Uva', emoji: '🍇', epoca: 'Sempre' },
+    ];
+
+    function isDisponivel(nome) {
+      const sempreDisponiveis = [
+        'Só Iogurte Natural', 'Iogurte com Granola', 'Coco + Mel',
+        'Chocolate', 'Amendoim', 'Fitness (Aveia + Frutas)', 'Super Palma (Especial)'
+      ];
+      if (sempreDisponiveis.includes(nome)) return true;
+
+      const meses = disponibilidadeFrutas[nome];
+      return meses ? meses.includes(mesAtual) : false;
+    }
+
+    const saboresSelecionados = new Set();
+
+    function gerarGrid() {
+      const container = document.getElementById('grelha-de-sabores');
+      if (!container) return;
+      container.innerHTML = '';
+
+      saboresLista.forEach(s => {
+        const disp = isDisponivel(s.nome);
+        const div = document.createElement('div');
+        div.className = `opcao-sabor ${disp ? 'disponivel' : 'indisponivel'}`;
+        div.setAttribute('data-sabor', s.nome);
+
+        let badgeEpoca = '';
+        if (disp) {
+          if (s.epoca === 'Sempre') badgeEpoca = `<span class="badge-epoca">🟢 Sempre disponível</span>`;
+          else badgeEpoca = `<span class="badge-epoca">🌿 Época: ${s.epoca}</span>`;
+        } else {
+          badgeEpoca = `<span class="badge-indisponivel">⛔ Fora de época</span>`;
+        }
+
+        div.innerHTML = `<span class="emoji-sabor">${s.emoji}</span><span class="nome-sabor">${s.nome}</span>${badgeEpoca}`;
+
+        if (disp) {
+          div.addEventListener('click', () => {
+            if (saboresSelecionados.has(s.nome)) {
+              saboresSelecionados.delete(s.nome);
+              div.classList.remove('selecionada');
+            } else {
+              saboresSelecionados.add(s.nome);
+              div.classList.add('selecionada');
+            }
+            const res = document.getElementById('resumo-selecao-sabor');
+            if (saboresSelecionados.size) res.innerHTML = `<span>✅ Selecionados: <strong>${[...saboresSelecionados].join(' + ')}</strong></span>`;
+            else res.innerHTML = '<span>👆 Escolha os sabores disponíveis na época</span>';
+          });
+        } else {
+          div.addEventListener('click', () => alert(`🍂 O sabor de ${s.nome} está fora da época (${s.epoca}).`));
+        }
+        container.appendChild(div);
+      });
+    }
+
+    // ========== CARROSSEL DINÂMICO PARA A HISTÓRIA ==========
+    function iniciarCarrossel() {
+      const imagens = [
+        { src: "./IMG/palma_22.jpeg", legenda: "Os fundadores: tradição e sabor." },
+        { src: "./IMG/palam_23.jpeg", legenda: "Equipe Palma: dedicação em cada etapa." },
+        { src: "./IMG/palma24.jpeg", legenda: "Produção artesanal e de qualidade." }
+      ];
+
+      let indiceAtual = 0;
+      const imgElement = document.getElementById('imgCriador');
+      const legendaElement = document.getElementById('legendaCarrossel');
+      const indicadoresContainer = document.getElementById('indicadoresCarrossel');
+
+      if (!imgElement || !legendaElement || !indicadoresContainer) return;
+
+      function criarIndicadores() {
+        indicadoresContainer.innerHTML = '';
+        imagens.forEach((_, index) => {
+          const botao = document.createElement('button');
+          botao.classList.add('indicador');
+          if (index === indiceAtual) botao.classList.add('ativo');
+          botao.addEventListener('click', () => {
+            indiceAtual = index;
+            atualizarCarrossel();
+            resetarIntervalo();
+          });
+          indicadoresContainer.appendChild(botao);
+        });
+      }
+
+      function atualizarCarrossel() {
+        imgElement.style.opacity = '0';
+        setTimeout(() => {
+          const imagemAtual = imagens[indiceAtual];
+          imgElement.src = imagemAtual.src;
+          legendaElement.textContent = imagemAtual.legenda;
+          imgElement.style.opacity = '1';
+          document.querySelectorAll('.indicador').forEach((btn, i) => {
+            if (i === indiceAtual) btn.classList.add('ativo');
+            else btn.classList.remove('ativo');
+          });
+        }, 300);
+      }
+
+      function proximaImagem() {
+        indiceAtual = (indiceAtual + 1) % imagens.length;
+        atualizarCarrossel();
+      }
+
+      let intervalo = setInterval(proximaImagem, 4000);
+      function resetarIntervalo() {
+        clearInterval(intervalo);
+        intervalo = setInterval(proximaImagem, 4000);
+      }
+
+      imgElement.style.opacity = '1';
+      criarIndicadores();
+      atualizarCarrossel();
+    }
+
+    // ========== FUNÇÕES DO SUPABASE PARA OPINIÕES ==========
+    let avaliacaoAtual = 0;
+
+    function mostrarWidgetEstrelas() {
+      const c = document.getElementById('widgetEstrelas');
+      if (!c) return;
+      let h = '';
+      for (let i = 1; i <= 5; i++) h += `<button class="botao-estrela${i <= avaliacaoAtual ? ' ativa' : ''}" data-valor="${i}">${i <= avaliacaoAtual ? '★' : '☆'}</button>`;
+      c.innerHTML = h;
+      c.querySelectorAll('.botao-estrela').forEach(b => b.addEventListener('click', () => { avaliacaoAtual = parseInt(b.dataset.valor); mostrarWidgetEstrelas(); }));
+    }
+
+    async function carregarOpinioes() {
+      const feed = document.getElementById('feedOpinioes');
+      if (!feed) return;
+      feed.innerHTML = '<div class="estado-carregando">A carregar opiniões...</div>';
+
+      try {
+        const { data, error } = await supabase
+          .from('opinioes')
+          .select('*')
+          .order('created_at', { ascending: false });
+
+        if (error) throw error;
+
+        if (!data || data.length === 0) {
+          feed.innerHTML = '<div class="cartao-opiniao">✨ Seja o primeiro a partilhar a sua experiência!</div>';
+          document.getElementById('totalAvaliacoes').innerText = '0';
+          document.getElementById('mediaAvaliacoes').innerText = '0';
+          document.getElementById('contadorOpinioes').innerText = '0 opiniões';
+          return;
+        }
+
+        let soma = 0;
+        feed.innerHTML = '';
+        data.forEach(op => {
+          const estrelas = '★'.repeat(op.avaliacao) + '☆'.repeat(5 - op.avaliacao);
+          soma += op.avaliacao;
+          const dataFormatada = op.created_at ? new Date(op.created_at).toLocaleDateString('pt-PT') : '';
+          feed.innerHTML += `
+              <div class="cartao-opiniao">
+                <div class="cabecalho-opiniao">
+                  <div class="info-utilizador">
+                    <div class="avatar-inicial">${op.nome.charAt(0)}</div>
+                    <div>
+                      <strong>${escapeHtml(op.nome)}</strong>
+                      <div style="font-size:0.7rem; color:var(--pedra);">${escapeHtml(op.cidade || 'Angola')}</div>
+                    </div>
+                  </div>
+                  <div style="color:var(--ouro);">${estrelas}</div>
+                </div>
+                <p style="margin-top:8px; color:var(--tinta-suave);">"${escapeHtml(op.comentario)}"</p>
+                <div style="margin-top:10px; font-size:0.7rem; color:var(--pedra);">📅 ${dataFormatada}</div>
+              </div>
+            `;
+        });
+
+        const media = (soma / data.length).toFixed(1);
+        document.getElementById('totalAvaliacoes').innerText = data.length;
+        document.getElementById('mediaAvaliacoes').innerText = media;
+        document.getElementById('contadorOpinioes').innerText = data.length + ' opiniões';
+
+      } catch (erro) {
+        console.error('Erro ao carregar:', erro);
+        feed.innerHTML = '<div class="cartao-opiniao" style="color:var(--vinho);">⚠️ Erro ao carregar opiniões.</div>';
+      }
+    }
+
+    async function publicarOpiniao() {
+      const nome = document.getElementById('campoNomeOpiniao')?.value.trim();
+      const cidade = document.getElementById('campoCidadeOpiniao')?.value.trim() || 'Angola';
+      const comentario = document.getElementById('campoComentarioOpiniao')?.value.trim();
+
+      if (!nome) return alert('📝 Por favor, preencha o seu nome');
+      if (!comentario || comentario.length < 5) return alert('💬 Escreva um comentário com pelo menos 5 caracteres');
+      if (avaliacaoAtual === 0) return alert('⭐ Dê uma avaliação em estrelas (1 a 5)');
+
+      const botao = document.getElementById('botaoPublicarOpiniao');
+      const textoOriginal = botao.textContent;
+      botao.disabled = true;
+      botao.textContent = '📤 A publicar...';
+
+      try {
+        const { error } = await supabase
+          .from('opinioes')
+          .insert([{
+            nome: nome,
+            cidade: cidade,
+            comentario: comentario,
+            avaliacao: avaliacaoAtual
+          }]);
+
+        if (error) throw error;
+
+        document.getElementById('campoNomeOpiniao').value = '';
+        document.getElementById('campoComentarioOpiniao').value = '';
+        document.getElementById('campoCidadeOpiniao').value = '';
+        avaliacaoAtual = 0;
+        mostrarWidgetEstrelas();
+
+        alert('✅ Opinião publicada com sucesso! Obrigado pelo seu feedback.');
+        await carregarOpinioes();
+        mudarPagina('comunidade');
+
+      } catch (erro) {
+        console.error('Erro:', erro);
+        alert('❌ Erro ao publicar. Tente novamente.');
+      } finally {
+        botao.disabled = false;
+        botao.textContent = textoOriginal;
+      }
+    }
+
+    function escapeHtml(str) {
+      if (!str) return '';
+      return str.replace(/[&<>]/g, m => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;' }[m]));
+    }
+
+    // ========== PEDIDOS ==========
+    async function enviarPedido() {
+      const nome = document.getElementById('campoNomePedido')?.value.trim();
+      const telefone = document.getElementById('campTelefonePedido')?.value.trim();
+      const cidade = document.getElementById('campoCidadePedido')?.value.trim();
+      const produto = document.getElementById('campoProdutoPedido')?.value;
+      const sabores = document.getElementById('campoSaboresPedido')?.value.trim();
+      const quantidade = document.getElementById('campoQuantidadePedido')?.value.trim();
+      const observacoes = document.getElementById('campoObservacoesPedido')?.value.trim();
+
+      if (!nome) return alert('📝 Preencha o seu nome');
+      if (!telefone) return alert('📱 Preencha o seu WhatsApp');
+
+      const msg = `*PEDIDO PALMA IOGURTES*%0A%0A*Nome:* ${nome}%0A*WhatsApp:* ${telefone}%0A*Cidade:* ${cidade || '-'}%0A*Produto:* ${produto}%0A*Sabores:* ${sabores || 'Multifrutas'}%0A*Quantidade:* ${quantidade || '-'}%0A*Observações:* ${observacoes || '-'}`;
+      window.open(`https://wa.me/244939190649?text=${msg}`, '_blank');
+    }
+
+    // ========== NAVEGAÇÃO ==========
+    function mudarPagina(id) {
+      document.querySelectorAll('.pagina').forEach(p => p.classList.remove('pagina-ativa'));
+      document.getElementById(`${id}-page`)?.classList.add('pagina-ativa');
+      document.querySelectorAll('.link-nav').forEach(l => l.classList.remove('pagina-ativa'));
+      document.querySelectorAll(`.link-nav[data-pagina="${id}"]`).forEach(l => l.classList.add('pagina-ativa'));
+      window.scrollTo({ top: 0 });
+      if (id === 'comunidade') carregarOpinioes();
+      const menu = document.getElementById('listaLinksNav');
+      if (menu?.classList.contains('aberto')) menu.classList.remove('aberto');
+    }
+
+    // ========== EVENTOS ==========
+    document.querySelectorAll('[data-pagina]').forEach(el => el.addEventListener('click', (e) => { e.preventDefault(); const pg = el.dataset.pagina; if (pg) mudarPagina(pg); }));
+    document.getElementById('gatilhoLogoInicio')?.addEventListener('click', (e) => { e.preventDefault(); mudarPagina('inicio'); });
+    document.getElementById('botaoPublicarOpiniao')?.addEventListener('click', publicarOpiniao);
+    document.getElementById('botaoEnviarPedido')?.addEventListener('click', enviarPedido);
+    document.getElementById('botaoMenu')?.addEventListener('click', () => document.getElementById('listaLinksNav')?.classList.toggle('aberto'));
+    document.getElementById('botaoEncomendarPersonalizado')?.addEventListener('click', () => { if (saboresSelecionados.size) document.getElementById('campoSaboresPedido').value = [...saboresSelecionados].join(', '); mudarPagina('pedidos'); });
+
+    // ========== INICIALIZAÇÃO ==========
+    gerarGrid();
+    mostrarWidgetEstrelas();
+    carregarOpinioes();
+    atualizarContagemAnos();
+
+    // Iniciar carrossel quando a página carregar
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', iniciarCarrossel);
+    } else {
+      iniciarCarrossel();
+    }
+  </script>
+</body>
+
+</html>

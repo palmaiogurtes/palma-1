@@ -517,42 +517,35 @@
     }
 
     // ========== SISTEMA DE ÉPOCAS E SABORES ==========
-    const mesAtual = new Date().getMonth();
+   const mesAtual = new Date().getMonth();
     const disponibilidadeFrutas = {
-      'Manga': [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11],
+      'Manga': [8, 9, 10, 11, 0, 1],
       'Banana': [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11],
-      'Morango': [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11],
-      'Ananás': [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11],
-      'Mirtilo': [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11],
-      'Maracujá': [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11],
-      'Laranja': [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11],
-      'Só Iogurte Natural': [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11],
-      'Uva': [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11],
-      'kiwi': [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11],
-      'Chia': [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
-
+      'Morango': [5, 6, 7, 8],
+      'Ananás': [9, 10, 11, 0, 1, 2],
+      'Maracujá': [8, 9, 10, 11, 0, 1, 2],
+      'Goiaba': [2, 3, 4, 5, 6],
+      'Laranja': [4, 5, 6, 7, 8, 9],
+      'Só Iogurte Natural': [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
     };
 
     const saboresLista = [
       // Sabores Tradicionais
-      { nome: 'Manga', emoji: '🥭', epoca :'Disponivel' },
-      { nome: 'Banana', emoji: '🍌', epoca : 'Disponivel' },
-      { nome: 'Morango', emoji: '🍓', epoca :'Disponivel' },
-      { nome: 'Maracujá', emoji: '🟡', epoca :'Disponivel' },
-      { nome: ' Mirtilo ', emoji: '🫐', epoca : 'Disponivel' },
-      { nome: 'Kiwi', emoji: '🥝', epoca : 'Disponivel' },
+      { nome: 'Manga', emoji: '🥭', epoca: 'Set a Fev' },
+      { nome: 'Banana', emoji: '🍌', epoca: 'Todo o ano' },
+      { nome: 'Morango', emoji: '🍓', epoca: 'Jun a Set' },
+      { nome: 'Maracujá', emoji: '🟡', epoca: 'Set a Abr' },
+      { nome: 'Goiaba', emoji: '🫐', epoca: 'Mar a Jul' },
       
-      { nome: 'Só Iogurte Natural', emoji: '🥛', epoca :'Disponivel' },
-      { nome: 'Chia', emoji: '🫘', epoca :'Disponivel' },
+      { nome: 'Só Iogurte Natural', emoji: '🥛', epoca: 'Sempre' },
 
       // Novos Sabores
-      { nome: 'Iogurte com Granola', emoji: '🥣', epoca: 'Disponivel' },
-      { nome: 'Coco + Mel', emoji: '🥥🍯', epoca: 'Disponivel' },
-      { nome: 'Chocolate', emoji: '🍫', epoca: 'Disponivel' },
-      { nome: 'Amendoim', emoji: '🥜', epoca: 'Disponivel' },
-      { nome: 'Fitness (Aveia + Frutas)', emoji: '💪', epoca: 'Disponivel' },
-      { nome: 'Super Palma (Especial)', emoji: '👑', epoca: 'Disponivel' },
-      { nome: 'Uva', emoji: '🍇', epoca: 'Disponivel' },
+      { nome: 'Iogurte com Granola', emoji: '🥣', epoca: 'Sempre' },
+      { nome: 'Coco + Mel', emoji: '🥥🍯', epoca: 'Sempre' },
+      { nome: 'Chocolate', emoji: '🍫', epoca: 'Sempre' },
+      { nome: 'Amendoim', emoji: '🥜', epoca: 'Sempre' },
+      { nome: 'Fitness (Aveia + Frutas)', emoji: '💪', epoca: 'Sempre' },
+      { nome: 'Super Palma (Especial)', emoji: '👑', epoca: 'Sempre' }
     ];
 
     function isDisponivel(nome) {
@@ -560,7 +553,7 @@
         'Só Iogurte Natural', 'Iogurte com Granola', 'Coco + Mel',
         'Chocolate', 'Amendoim', 'Fitness (Aveia + Frutas)', 'Super Palma (Especial)'
       ];
-      if (Disponiveis.includes(nome)) return true;
+      if (sempreDisponiveis.includes(nome)) return true;
 
       const meses = disponibilidadeFrutas[nome];
       return meses ? meses.includes(mesAtual) : false;
@@ -601,6 +594,7 @@
             const res = document.getElementById('resumo-selecao-sabor');
             if (saboresSelecionados.size) res.innerHTML = `<span>✅ Selecionados: <strong>${[...saboresSelecionados].join(' + ')}</strong></span>`;
             else res.innerHTML = '<span>👆 Escolha os sabores disponíveis na época</span>';
+
           });
         } else {
           div.addEventListener('click', () => alert(`🍂 O sabor de ${s.nome} está fora da época (${s.epoca}).`));

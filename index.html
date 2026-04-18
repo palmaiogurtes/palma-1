@@ -560,7 +560,7 @@
         'Só Iogurte Natural', 'Iogurte com Granola', 'Coco + Mel',
         'Chocolate', 'Amendoim', 'Fitness (Aveia + Frutas)', 'Super Palma (Especial)'
       ];
-      if (sempreDisponiveis.includes(nome)) return true;
+      if (Disponiveis.includes(nome)) return true;
 
       const meses = disponibilidadeFrutas[nome];
       return meses ? meses.includes(mesAtual) : false;

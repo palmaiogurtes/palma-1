@@ -413,7 +413,77 @@
 
   <script type="module">
    
+ // ========== PROTEÇÃO DE CÓDIGO FONTE ==========
+    (function () {
+      // 1. Bloquear clique direito
+      document.addEventListener('contextmenu', function (e) {
+        e.preventDefault();
+        return false;
+      });
 
+      // 2. Bloquear teclas de atalho
+      document.addEventListener('keydown', function (e) {
+        // F12
+        if (e.key === 'F12' || e.keyCode === 123) {
+          e.preventDefault();
+          return false;
+        }
+        // Ctrl+U (Ver fonte)
+        if ((e.ctrlKey || e.metaKey) && (e.key === 'u' || e.keyCode === 85)) {
+          e.preventDefault();
+          return false;
+        }
+        // Ctrl+Shift+I (DevTools)
+        if ((e.ctrlKey || e.metaKey) && (e.shiftKey) && (e.key === 'I' || e.keyCode === 73)) {
+          e.preventDefault();
+          return false;
+        }
+        // Ctrl+Shift+C (Inspecionar)
+        if ((e.ctrlKey || e.metaKey) && (e.shiftKey) && (e.key === 'C' || e.keyCode === 67)) {
+          e.preventDefault();
+          return false;
+        }
+        // Ctrl+Shift+J (Console)
+        if ((e.ctrlKey || e.metaKey) && (e.shiftKey) && (e.key === 'J' || e.keyCode === 74)) {
+          e.preventDefault();
+          return false;
+        }
+        // Ctrl+S (Salvar página)
+        if ((e.ctrlKey || e.metaKey) && (e.key === 's' || e.keyCode === 83)) {
+          e.preventDefault();
+          return false;
+        }
+      });
+
+      // 3. Detectar abertura do DevTools (monitorando resize)
+      let devToolsOpen = false;
+      const element = new Image();
+
+      Object.defineProperty(element, 'id', {
+        get: function () {
+          devToolsOpen = true;
+          window.location.reload(); // Recarrega se DevTools for aberto
+        }
+      });
+
+      setInterval(function () {
+        devToolsOpen = false;
+        console.log(element);
+        console.clear();
+        if (devToolsOpen) {
+          window.location.reload();
+        }
+      }, 1000);
+
+      // 4. Prevenir drag and drop de imagens (opcional)
+      document.querySelectorAll('img').forEach(img => {
+        img.addEventListener('dragstart', (e) => e.preventDefault());
+        img.addEventListener('contextmenu', (e) => e.preventDefault());
+      });
+    })();
+
+    // ========== SEU CÓDIGO ORIGINAL CONTINUA ABAIXO ==========
+    // ... (todo o seu código existente vem aqui)
     // ========== CONFIGURAÇÃO DO SUPABASE ==========
     const SUPABASE_URL = 'https://ahigtazuegcybpvwrgjg.supabase.co';
     const SUPABASE_ANON_KEY = 'sb_publishable_VhdCEr0zsxymJntlLCAs2Q_LtC_eJqC';

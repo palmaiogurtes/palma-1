@@ -1135,7 +1135,7 @@
     </section>
   </div>
 
-  <!-- PEDIDOS -->
+ <!-- PEDIDOS -->
   <div id="pedidos-page" class="pagina">
     <section class="secao-pedidos">
       <div class="pedidos-header"><span class="etiqueta-secao">Encomenda rápida</span><h2>Fazer um pedido</h2><p style="color:var(--pedra); margin-top:0.4rem;">Escolha o método de pagamento e envie o pedido em segundos.</p></div>
@@ -1148,7 +1148,7 @@
           </div>
           <div class="express-painel" id="expresspainel">
             <div class="express-header-novo"><div class="express-brand"><div class="express-brand-icon"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="white" stroke-width="2"><rect x="2" y="5" width="20" height="14" rx="3"/><path d="M2 10h20"/><path d="M6 15h4" stroke-linecap="round"/></svg></div><div><p class="express-nome">Multicaixa Express</p><p class="express-sub">Pagamento seguro e instantâneo</p></div></div><div class="express-selo-seguro"><svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg> Seguro</div></div>
-            <div class="express-numero-destaque"><div class="express-numero-label">Número para transferência</div><div class="express-numero-box"><span class="express-numero" id="numeroExpress">939 190 649</span><button class="btn-copiar-novo" id="btnCopiarExpress">📋 Copiar</button></div><div class="express-titular-linha"><span class="express-titular-label">Titular:</span><span class="express-titular-val">Palma Iogurtes</span></div></div>
+            <div class="express-numero-destaque"><div class="express-numero-label">Número para transferência</div><div class="express-numero-box"><span class="express-numero" id="numeroExpress"931 598 384></span><button class="btn-copiar-novo" id="btnCopiarExpress">📋 Copiar</button></div><div class="express-titular-linha"><span class="express-titular-label">Titular:</span><span class="express-titular-val">Palma Iogurtes</span></div></div>
             <div class="express-passos-novo"><div class="express-passo-novo"><div class="passo-circulo">1</div><div class="passo-texto"><strong>Abra a app</strong><span>Multicaixa Express no seu telemóvel</span></div></div><div class="express-passo-novo"><div class="passo-circulo">2</div><div class="passo-texto"><strong>Transfira o valor</strong><span>Para o número acima — Palma Iogurtes</span></div></div><div class="express-passo-novo"><div class="passo-circulo">3</div><div class="passo-texto"><strong>Envie o comprovativo</strong><span>Pelo WhatsApp após o pagamento</span></div></div></div>
             <div class="express-valor-inline"><label class="express-valor-label">Valor a pagar (Kz)</label><div class="express-valor-row-novo"><input type="number" id="inputValorExpress" class="express-valor-input" placeholder="Ex: 3500" min="1"><button id="botaoPagarExpress" class="btn-pagar-express-novo"><span>💳</span><span>Pagar com Express</span></button></div></div>
             <div class="express-aviso-novo"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg> Após pagar, envie o comprovativo pelo WhatsApp.</div>
@@ -1699,11 +1699,11 @@
           btn.innerHTML = '📋 Copiar';
           btn.style.background = '';
         }, 2000);
-      }).catch(() => alert('Número: 939 190 649'));
+      }).catch(() => alert('Número: 931 598 384'));
     });
 
     window.pagarComExpress = function () {
-      const numero = '939190649';
+      const numero = '931598384';
       const input = document.getElementById('inputValorExpress');
       const valor = input ? input.value.trim() : '';
       if (!valor || isNaN(valor) || parseInt(valor) <= 0) {

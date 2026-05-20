@@ -23,7 +23,7 @@
 
   <style>
     /* =============================================
-       ESTILOS PARA PEDIDOS (MULTICAIXA EXPRESS)
+       ESTILOS PARA PEDIDOS (APENAS WHATSAPP)
     ============================================= */
     .secao-pedidos {
       padding: 2.5rem 5% 3rem;
@@ -81,11 +81,6 @@
       flex-shrink: 0;
     }
 
-    .express-cor {
-      background: linear-gradient(135deg, #9B2C2C, #C0392B);
-      color: white;
-    }
-
     .wa-cor {
       background: linear-gradient(135deg, #128C7E, #25D366);
       color: white;
@@ -124,245 +119,6 @@
 
     .oculto-check {
       display: none;
-    }
-
-    .metodo-badge {
-      position: absolute;
-      top: 0;
-      right: 0;
-      background: var(--vinho);
-      color: white;
-      font-size: 0.6rem;
-      font-weight: 700;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      padding: 0.2rem 0.65rem;
-      border-radius: 0 14px 0 10px;
-    }
-
-    .express-painel {
-      background: white;
-      border: 1.5px solid var(--vinho);
-      border-radius: 20px;
-      overflow: hidden;
-      max-height: 0;
-      opacity: 0;
-      transition: max-height 0.45s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.35s ease, margin 0.35s;
-      margin-bottom: 0;
-    }
-
-    .express-painel.aberto {
-      max-height: 650px;
-      opacity: 1;
-      margin-bottom: 1rem;
-    }
-
-    .express-header-novo {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      background: linear-gradient(135deg, var(--vinho) 0%, #C0392B 100%);
-      padding: 1rem 1.2rem;
-    }
-
-    .express-brand {
-      display: flex;
-      align-items: center;
-      gap: 0.7rem;
-    }
-
-    .express-brand-icon {
-      width: 44px;
-      height: 44px;
-      background: rgba(255, 255, 255, 0.15);
-      border-radius: 12px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-
-    .express-nome {
-      font-weight: 700;
-      color: white;
-      font-size: 0.95rem;
-      margin: 0;
-    }
-
-    .express-sub {
-      color: rgba(255, 255, 255, 0.7);
-      font-size: 0.7rem;
-      margin: 0;
-    }
-
-    .express-selo-seguro {
-      display: flex;
-      align-items: center;
-      gap: 0.3rem;
-      background: rgba(255, 255, 255, 0.12);
-      padding: 0.25rem 0.7rem;
-      border-radius: 20px;
-      font-size: 0.65rem;
-      color: white;
-    }
-
-    .express-numero-destaque {
-      padding: 1rem 1.2rem;
-      border-bottom: 1px solid rgba(155, 44, 44, 0.1);
-    }
-
-    .express-numero-label {
-      font-size: 0.65rem;
-      text-transform: uppercase;
-      letter-spacing: 0.1em;
-      color: var(--pedra);
-      margin-bottom: 0.4rem;
-    }
-
-    .express-numero-box {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 0.5rem;
-      flex-wrap: wrap;
-    }
-
-    .express-numero {
-      font-size: 1.4rem;
-      font-weight: 800;
-      color: var(--vinho);
-      letter-spacing: 0.05em;
-      font-family: monospace;
-    }
-
-    .btn-copiar-novo {
-      background: var(--vinho);
-      color: white;
-      border: none;
-      border-radius: 8px;
-      padding: 0.35rem 0.8rem;
-      font-size: 0.7rem;
-      font-weight: 600;
-      cursor: pointer;
-      display: flex;
-      align-items: center;
-      gap: 0.3rem;
-      transition: background 0.2s;
-    }
-
-    .btn-copiar-novo:hover {
-      background: #a00f0f;
-    }
-
-    .express-titular-linha {
-      display: flex;
-      gap: 0.4rem;
-      margin-top: 0.5rem;
-      font-size: 0.75rem;
-    }
-
-    .express-titular-val {
-      font-weight: 700;
-      color: var(--tinta);
-    }
-
-    .express-passos-novo {
-      padding: 1rem 1.2rem;
-    }
-
-    .express-passo-novo {
-      display: flex;
-      gap: 0.8rem;
-      margin-bottom: 0.8rem;
-    }
-
-    .passo-circulo {
-      width: 26px;
-      height: 26px;
-      background: linear-gradient(135deg, var(--vinho), #C0392B);
-      color: white;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 0.7rem;
-      font-weight: 700;
-      flex-shrink: 0;
-    }
-
-    .passo-texto strong {
-      display: block;
-      font-size: 0.8rem;
-    }
-
-    .passo-texto span {
-      font-size: 0.7rem;
-      color: var(--pedra);
-    }
-
-    .express-valor-inline {
-      padding: 0.5rem 1.2rem;
-      border-top: 1px solid rgba(155, 44, 44, 0.1);
-    }
-
-    .express-valor-label {
-      font-size: 0.65rem;
-      text-transform: uppercase;
-      letter-spacing: 0.1em;
-      color: var(--pedra);
-      display: block;
-      margin-bottom: 0.4rem;
-    }
-
-    .express-valor-row-novo {
-      display: flex;
-      gap: 0.6rem;
-      align-items: stretch;
-      flex-wrap: wrap;
-    }
-
-    .express-valor-input {
-      flex: 1;
-      padding: 0.7rem 0.9rem;
-      border: 2px solid var(--borda);
-      border-radius: 12px;
-      font-size: 0.95rem;
-      font-weight: 600;
-      font-family: inherit;
-    }
-
-    .express-valor-input:focus {
-      border-color: var(--vinho);
-      outline: none;
-    }
-
-    .btn-pagar-express-novo {
-      background: linear-gradient(135deg, var(--vinho), #C0392B);
-      color: white;
-      border: none;
-      border-radius: 12px;
-      padding: 0.7rem 1.2rem;
-      font-weight: 700;
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
-      cursor: pointer;
-      white-space: nowrap;
-      transition: transform 0.2s, box-shadow 0.2s;
-    }
-
-    .btn-pagar-express-novo:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 6px 14px rgba(155, 44, 44, 0.3);
-    }
-
-    .express-aviso-novo {
-      display: flex;
-      gap: 0.5rem;
-      padding: 0.8rem 1.2rem;
-      font-size: 0.7rem;
-      color: var(--pedra);
-      border-top: 1px solid rgba(155, 44, 44, 0.1);
-      background: #fffaf5;
     }
 
     .botao-enviar-pedido {
@@ -473,37 +229,8 @@
       }
     }
 
-    .nota-formulario {
-      font-size: 0.7rem;
-      color: var(--pedra);
-      text-align: center;
-      margin-top: 0.8rem;
-    }
-
-    .vitrine-estatisticas {
-      display: flex;
-      justify-content: center;
-      gap: 1rem;
-      margin-top: 1rem;
-    }
-
-    .cartao-estatistica-ouro {
-      background: rgba(155, 44, 44, 0.05);
-      border-radius: 16px;
-      padding: 0.8rem 1.2rem;
-      text-align: center;
-      border: 1px solid rgba(155, 44, 44, 0.1);
-      flex: 1;
-    }
-
-    .cartao-estatistica-ouro .numero-estatistica {
-      font-size: 1.2rem;
-      font-weight: 800;
-      color: var(--vinho);
-    }
-
     /* =============================================
-       GALERIA DA EQUIPA - MANTENDO AS TUAS IMAGENS
+       GALERIA DA EQUIPA - FOTOS E VÍDEOS
     ============================================= */
     .galeria-equipa-secao {
       background: var(--tinta);
@@ -529,6 +256,7 @@
       margin: 0 auto 1.8rem;
     }
 
+    /* TABS para alternar entre Fotos e Vídeos */
     .galeria-tabs-wrapper-novo {
       display: inline-flex;
       background: rgba(255, 255, 255, 0.08);
@@ -536,6 +264,7 @@
       border-radius: 40px;
       padding: 5px;
       gap: 4px;
+      margin-bottom: 2rem;
     }
 
     .gtab-novo {
@@ -573,6 +302,7 @@
       display: block;
     }
 
+    /* Masonry Grid para fotos */
     .galeria-masonry-real {
       column-count: 3;
       column-gap: 1rem;
@@ -651,6 +381,7 @@
       backdrop-filter: blur(4px);
     }
 
+    /* Vídeos Grid - Cards com imagem de capa editável */
     .videos-grid-novo {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
@@ -783,6 +514,7 @@
       margin-top: auto;
     }
 
+    /* Banner Social */
     .galeria-social-banner {
       display: flex;
       align-items: center;
@@ -978,6 +710,7 @@
       background: rgba(255,255,255,0.3);
     }
 
+    /* Video Modal */
     .video-modal {
       position: fixed;
       inset: 0;
@@ -1159,23 +892,15 @@
     </section>
   </div>
 
-  <!-- PEDIDOS COM EXPRESS MELHORADO -->
+  <!-- PEDIDOS -->
   <div id="pedidos-page" class="pagina">
     <section class="secao-pedidos">
-      <div class="pedidos-header"><span class="etiqueta-secao">Encomenda rápida</span><h2>Fazer um pedido</h2><p style="color:var(--pedra); margin-top:0.4rem;">Escolha o método de pagamento e envie o pedido em segundos.</p></div>
+      <div class="pedidos-header"><span class="etiqueta-secao">Encomenda rápida</span><h2>Fazer um pedido</h2><p style="color:var(--pedra); margin-top:0.4rem;">Preencha os dados abaixo e envie o seu pedido.</p></div>
       <div class="pedidos-layout-novo">
         <div class="pedidos-bloco-form"><div class="formulario-elegante" style="box-shadow:none; padding:0;"><div class="form-cabecalho"><div class="form-numero-bloco">1</div><h3>Detalhes do pedido</h3></div><div class="form-grid-dois"><div class="linha-campo"><label>Nome completo *</label><input id="campoNomePedido" placeholder="O seu nome" required></div><div class="linha-campo"><label>WhatsApp *</label><input id="campTelefonePedido" placeholder="+244 9XX XXX XXX" required></div><div class="linha-campo"><label>Cidade / Bairro</label><input id="campoCidadePedido" placeholder="Luanda, Talatona..."></div><div class="linha-campo"><label>Produto</label><select id="campoProdutoPedido"><option>Iogurte de Copo individual — 1.000 Kz</option><option>Iogurte de 500 ml — 3.500 Kz</option><option>Iogurte de 1000 ml — 6.500 Kz</option></select></div><div class="linha-campo"><label>Sabores pretendidos</label><input id="campoSaboresPedido" placeholder="Ex: Manga, Banana..."></div><div class="linha-campo"><label>Quantidade</label><input id="campoQuantidadePedido" placeholder="Ex: 12 unidades"></div></div><div class="linha-campo"><label>Observações</label><textarea id="campoObservacoesPedido" rows="2" placeholder="Alguma preferência especial?"></textarea></div></div></div>
-        <div class="pedidos-bloco-pagamento"><div class="pagamento-cabecalho"><div class="form-numero-bloco">2</div><h3>Escolha como quer pagar</h3></div>
+        <div class="pedidos-bloco-pagamento"><div class="pagamento-cabecalho"><div class="form-numero-bloco">2</div><h3>Método de pagamento</h3></div>
           <div class="metodos-pagamento" id="metodosPagamento">
-            <div class="metodo-card" data-metodo="whatsapp" id="cardWhatsapp"><div class="metodo-card-inner"><div class="metodo-icone wa-cor"><svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg></div><div class="metodo-texto"><strong>WhatsApp</strong><span>Pedido e pagamento na entrega</span></div><div class="metodo-check oculto-check" id="checkWhatsapp">✓</div></div></div>
-            <div class="metodo-card" data-metodo="express" id="cardExpress"><div class="metodo-card-inner"><div class="metodo-icone express-cor"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="5" width="20" height="14" rx="3"/><path d="M2 10h20"/><path d="M6 15h4M14 15h4" stroke-linecap="round"/></svg></div><div class="metodo-texto"><strong>Multicaixa Express</strong><span>Pagamento virtual instantâneo</span></div><div class="metodo-check oculto-check" id="checkExpress">✓</div></div><div class="metodo-badge">Recomendado</div></div>
-          </div>
-          <div class="express-painel" id="expresspainel">
-            <div class="express-header-novo"><div class="express-brand"><div class="express-brand-icon"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="white" stroke-width="2"><rect x="2" y="5" width="20" height="14" rx="3"/><path d="M2 10h20"/><path d="M6 15h4" stroke-linecap="round"/></svg></div><div><p class="express-nome">Multicaixa Express</p><p class="express-sub">Pagamento seguro e instantâneo</p></div></div><div class="express-selo-seguro"><svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg> Seguro</div></div>
-            <div class="express-numero-destaque"><div class="express-numero-label">Número para transferência</div><div class="express-numero-box"><span class="express-numero" id="numeroExpress">939 190 649</span><button class="btn-copiar-novo" id="btnCopiarExpress">📋 Copiar</button></div><div class="express-titular-linha"><span class="express-titular-label">Titular:</span><span class="express-titular-val">Palma Iogurtes</span></div></div>
-            <div class="express-passos-novo"><div class="express-passo-novo"><div class="passo-circulo">1</div><div class="passo-texto"><strong>Abra a app</strong><span>Multicaixa Express no seu telemóvel</span></div></div><div class="express-passo-novo"><div class="passo-circulo">2</div><div class="passo-texto"><strong>Transfira o valor</strong><span>Para o número acima — Palma Iogurtes</span></div></div><div class="express-passo-novo"><div class="passo-circulo">3</div><div class="passo-texto"><strong>Envie o comprovativo</strong><span>Pelo WhatsApp após o pagamento</span></div></div></div>
-            <div class="express-valor-inline"><label class="express-valor-label">Valor a pagar (Kz)</label><div class="express-valor-row-novo"><input type="number" id="inputValorExpress" class="express-valor-input" placeholder="Ex: 3500" min="1"><button id="botaoPagarExpress" class="btn-pagar-express-novo"><span>💳</span><span>Pagar com Express</span></button></div></div>
-            <div class="express-aviso-novo"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg> Após pagar, envie o comprovativo pelo WhatsApp.</div>
+            <div class="metodo-card ativo" data-metodo="whatsapp" id="cardWhatsapp"><div class="metodo-card-inner"><div class="metodo-icone wa-cor"><svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg></div><div class="metodo-texto"><strong>WhatsApp</strong><span>Pedido e pagamento na entrega</span></div><div class="metodo-check" id="checkWhatsapp">✓</div></div></div>
           </div>
           <button class="botao-enviar-pedido" id="botaoEnviarPedido">
             <span class="wa-icon-wrap">
@@ -1224,57 +949,65 @@
       </div>
     </section>
 
-    <!-- GALERIA DA EQUIPA - COM AS TUAS IMAGENS ORIGINAIS -->
+    <!-- GALERIA DA EQUIPA - COM FOTOS E VÍDEOS -->
     <section class="galeria-equipa-secao">
       <div class="galeria-equipa-topo">
         <span class="etiqueta-secao" style="background:rgba(255,255,255,0.1);">Galeria</span>
-        <h2 class="galeria-equipa-titulo">A nossa equipa em imagens</h2>
-        <p class="galeria-equipa-sub">Bastidores reais, pessoas reais — a construir algo especial para Angola.</p>
+        <h2 class="galeria-equipa-titulo">Conheça a nossa equipa </h2>
+        <p class="galeria-equipa-sub">Conheça os colaboradores, os bastidores e quem faz a Palma Iogurtes acontecer todos os dias.</p>
+        
+        <!-- TABS para alternar entre Fotos e Vídeos -->
         <div class="galeria-tabs-wrapper-novo">
           <button class="gtab-novo ativo" data-tab="fotos"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg> Fotos</button>
           <button class="gtab-novo" data-tab="videos"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor"><polygon points="23 7 16 12 23 17 23 7"/><rect x="1" y="5" width="15" height="14" rx="2"/></svg> Vídeos</button>
         </div>
       </div>
 
-      <!-- PAINEL DE FOTOS - COM AS TUAS IMAGENS ORIGINAIS -->
+      <!-- PAINEL DE FOTOS -->
       <div class="galeria-painel ativo" id="gpainel-fotos">
         <div class="galeria-masonry-real" id="galeriaMasonryContainer">
           <div class="gitem-novo" onclick="abrirGaleria(0)">
-            <img src="francisco.jpg" alt="Equipa Palma">
+            <img src="francisco.jpg" alt="Equipa Palma" data-legenda="Equipa de produção — dedicação em cada detalhe" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22300%22 height=%22300%22%3E%3Crect width=%22300%22 height=%22300%22 fill=%22%239B2C2C%22/%3E%3Ctext x=%2250%%22 y=%2250%%22 text-anchor=%22middle%22 fill=%22white%22 font-size=%2216%22%3EEquipa%3C/text%3E%3C/svg%3E'">
             <div class="gitem-overlay-novo"><div class="gitem-info-novo"><p>Equipa de produção — dedicação em cada detalhe</p></div><div class="gitem-zoom-novo"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="white" stroke-width="2.5"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg></div></div>
           </div>
           <div class="gitem-novo" onclick="abrirGaleria(1)">
-            <img src="francisco_felip.jpg" alt="Dona Palma">
+            <img src="francisco_felip.jpg" alt="Dona Palma" data-legenda="Dona Palma — fundadora e coração da empresa" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22300%22 height=%22300%22%3E%3Crect width=%22300%22 height=%22300%22 fill=%22%239B2C2C%22/%3E%3Ctext x=%2250%%22 y=%2250%%22 text-anchor=%22middle%22 fill=%22white%22 font-size=%2216%22%3EFundadora%3C/text%3E%3C/svg%3E'">
             <div class="gitem-overlay-novo"><div class="gitem-info-novo"><p>Dona Palma — fundadora e coração da empresa</p></div><div class="gitem-zoom-novo"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="white" stroke-width="2.5"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg></div></div>
           </div>
           <div class="gitem-novo" onclick="abrirGaleria(2)">
-            <img src="patroa.jpg" alt="Sebastião Florentino">
+            <img src="patroa.jpg" alt="Sebastião Florentino" data-legenda="Sebastião Florentino — inspiração e dedicação" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22300%22 height=%22300%22%3E%3Crect width=%22300%22 height=%22300%22 fill=%22%239B2C2C%22/%3E%3Ctext x=%2250%%22 y=%2250%%22 text-anchor=%22middle%22 fill=%22white%22 font-size=%2216%22%3ESebastião%3C/text%3E%3C/svg%3E'">
             <div class="gitem-overlay-novo"><div class="gitem-info-novo"><p>Sebastião Florentino — inspiração e dedicação</p></div><div class="gitem-zoom-novo"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="white" stroke-width="2.5"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg></div></div>
           </div>
           <div class="gitem-novo" onclick="abrirGaleria(3)">
-            <img src="patroa_felip.jpg" alt="Equipa de produção">
+            <img src="patroa_felip.jpg" alt="Equipa de produção" data-legenda="Equipa de produção — qualidade e higiene" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22300%22 height=%22300%22%3E%3Crect width=%22300%22 height=%22300%22 fill=%22%239B2C2C%22/%3E%3Ctext x=%2250%%22 y=%2250%%22 text-anchor=%22middle%22 fill=%22white%22 font-size=%2216%22%3EProdução%3C/text%3E%3C/svg%3E'">
             <div class="gitem-overlay-novo"><div class="gitem-info-novo"><p>Equipa de produção — qualidade e higiene</p></div><div class="gitem-zoom-novo"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="white" stroke-width="2.5"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg></div></div>
           </div>
           <div class="gitem-novo" onclick="abrirGaleria(4)">
-            <img src="palma_22.jpeg" alt="Momento de trabalho">
+            <img src="palma_22.jpeg" alt="Momento de trabalho" data-legenda="Momento de trabalho — dedicação em cada etapa" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22300%22 height=%22300%22%3E%3Crect width=%22300%22 height=%22300%22 fill=%22%239B2C2C%22/%3E%3Ctext x=%2250%%22 y=%2250%%22 text-anchor=%22middle%22 fill=%22white%22 font-size=%2216%22%3ETrabalho%3C/text%3E%3C/svg%3E'">
             <div class="gitem-overlay-novo"><div class="gitem-info-novo"><p>Momento de trabalho — dedicação em cada etapa</p></div><div class="gitem-zoom-novo"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="white" stroke-width="2.5"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg></div></div>
           </div>
           <div class="gitem-novo" onclick="abrirGaleria(5)">
-            <img src="felip.jpg" alt="Equipa feliz">
+            <img src="felip.jpg" alt="Equipa feliz" data-legenda="Equipa feliz — o sorriso por trás do sabor" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22300%22 height=%22300%22%3E%3Crect width=%22300%22 height=%22300%22 fill=%22%239B2C2C%22/%3E%3Ctext x=%2250%%22 y=%2250%%22 text-anchor=%22middle%22 fill=%22white%22 font-size=%2216%22%3ESorriso%3C/text%3E%3C/svg%3E'">
             <div class="gitem-overlay-novo"><div class="gitem-info-novo"><p>Equipa feliz — o sorriso por trás do sabor</p></div><div class="gitem-zoom-novo"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="white" stroke-width="2.5"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg></div></div>
           </div>
         </div>
-        <div class="galeria-social-banner">
-          <div class="galeria-social-texto"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>Mais fotos e conteúdo exclusivo nas nossas redes sociais</span></div>
-          <div class="galeria-social-btns"><a href="https://www.instagram.com/palma_iogurte2?igsh=dWZlaXJoenp0aHpp" target="_blank" class="btn-social-galeria instagram-galeria"><svg viewBox="0 0 24 24" width="14" height="14" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069z"/></svg> Instagram</a><a href="https://www.tiktok.com/@palmaiogurte2?_r=1&_t=ZS-95OvIcxuhkK" target="_blank" class="btn-social-galeria tiktok-galeria"><svg viewBox="0 0 24 24" width="14" height="14" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.69a8.18 8.18 0 004.78 1.52V6.77a4.85 4.85 0 01-1.01-.08z"/></svg> TikTok</a></div>
-        </div>
       </div>
 
-      <!-- PAINEL DE VÍDEOS - COM AS TUAS IMAGENS ORIGINAIS -->
+      <!-- PAINEL DE VÍDEOS -->
       <div class="galeria-painel" id="gpainel-videos">
         <div class="videos-grid-novo">
           <a href="https://www.tiktok.com/@palmaiogurte2" target="_blank" class="video-card-novo">
-            <div class="video-thumb-novo"><img src="patroa.jpg" alt="Vídeo TikTok Palma Iogurtes"></div>
+            <div class="video-thumb-novo">
+              <img src="patroa.jpg" alt="Vídeo TikTok Palma Iogurtes">
+              <div class="video-overlay">
+                <div class="video-play-novo">
+                  <svg viewBox="0 0 24 24" width="28" height="28" fill="white">
+                    <polygon points="5 3 19 12 5 21 5 3" />
+                  </svg>
+                </div>
+              </div>
+              <div class="video-plat-badge"> TikTok</div>
+            </div>
             <div class="video-info-novo">
               <div class="video-info-topo"><h4>Bastidores no TikTok</h4><span class="video-ext-icon">↗</span></div>
               <p>Produção, equipa e os momentos mais autênticos da Palma Iogurtes.</p>
@@ -1282,7 +1015,17 @@
             </div>
           </a>
           <a href="https://www.instagram.com/palma_iogurte2" target="_blank" class="video-card-novo">
-            <div class="video-thumb-novo"><img src="palam_23.jpeg" alt="Vídeo Instagram Palma Iogurtes"></div>
+            <div class="video-thumb-novo">
+              <img src="palam_23.jpeg" alt="Vídeo Instagram Palma Iogurtes">
+              <div class="video-overlay">
+                <div class="video-play-novo">
+                  <svg viewBox="0 0 24 24" width="28" height="28" fill="white">
+                    <polygon points="5 3 19 12 5 21 5 3" />
+                  </svg>
+                </div>
+              </div>
+              <div class="video-plat-badge"> Reels</div>
+            </div>
             <div class="video-info-novo">
               <div class="video-info-topo"><h4>Reels no Instagram</h4><span class="video-ext-icon">↗</span></div>
               <p>Sabores, receitas e os melhores momentos da nossa equipa.</p>
@@ -1290,7 +1033,17 @@
             </div>
           </a>
           <div class="video-card-novo" id="btnVideoPromocional">
-            <div class="video-thumb-novo"><img src="nona_img_capa.jpeg" alt="Vídeo Promocional Palma Iogurtes"></div>
+            <div class="video-thumb-novo">
+              <img src="nona_img_capa.jpeg" alt="Vídeo Promocional Palma Iogurtes">
+              <div class="video-overlay">
+                <div class="video-play-novo">
+                  <svg viewBox="0 0 24 24" width="28" height="28" fill="white">
+                    <polygon points="5 3 19 12 5 21 5 3" />
+                  </svg>
+                </div>
+              </div>
+              <div class="video-plat-badge"> Promo</div>
+            </div>
             <div class="video-info-novo">
               <div class="video-info-topo"><h4>Conheça a Palma Iogurtes</h4><span class="video-ext-icon">▶</span></div>
               <p>Veja como nasce o nosso iogurte, a nossa história e a paixão por produzir qualidade.</p>
@@ -1299,10 +1052,15 @@
           </div>
         </div>
       </div>
+
+      <div class="galeria-social-banner">
+        <div class="galeria-social-texto"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><span>Mais momentos da nossa equipa nas redes sociais</span></div>
+        <div class="galeria-social-btns"><a href="https://www.instagram.com/palma_iogurte2?igsh=dWZlaXJoenp0aHpp" target="_blank" class="btn-social-galeria instagram-galeria"><svg viewBox="0 0 24 24" width="14" height="14" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069z"/></svg> Instagram</a><a href="https://www.tiktok.com/@palmaiogurte2?_r=1&_t=ZS-95OvIcxuhkK" target="_blank" class="btn-social-galeria tiktok-galeria"><svg viewBox="0 0 24 24" width="14" height="14" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.69a8.18 8.18 0 004.78 1.52V6.77a4.85 4.85 0 01-1.01-.08z"/></svg> TikTok</a></div>
+      </div>
     </section>
   </div>
 
-   <footer class="rodape-principal">
+  <footer class="rodape-principal">
     <div class="conteudo-rodape">
       <div class="coluna-rodape">
         <h4>Palma Iogurtes</h4>
@@ -1636,75 +1394,9 @@
       return str.replace(/[&<>]/g, m => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;' }[m]));
     }
 
-    // ========== FUNÇÕES DE PAGAMENTO ==========
+    // ========== FUNÇÕES DE PAGAMENTO (APENAS WHATSAPP) ==========
     let metodoPagamentoAtual = 'whatsapp';
 
-    // Alternar entre métodos de pagamento
-    document.querySelectorAll('.metodo-card').forEach(card => {
-      card.addEventListener('click', () => {
-        const metodo = card.dataset.metodo;
-        metodoPagamentoAtual = metodo;
-        document.querySelectorAll('.metodo-card').forEach(c => c.classList.remove('ativo'));
-        card.classList.add('ativo');
-
-        const checkE = document.getElementById('checkExpress');
-        const checkW = document.getElementById('checkWhatsapp');
-        if (checkE) checkE.style.display = metodo === 'express' ? 'flex' : 'none';
-        if (checkW) checkW.style.display = metodo === 'whatsapp' ? 'flex' : 'none';
-
-        const painel = document.getElementById('expresspainel');
-        const textoBotao = document.getElementById('textoBotaoPedido');
-
-        if (metodo === 'express') {
-          painel.classList.add('aberto');
-          if (textoBotao) textoBotao.textContent = 'Confirmar pedido (Express)';
-        } else {
-          painel.classList.remove('aberto');
-          if (textoBotao) textoBotao.textContent = 'Enviar pedido pelo WhatsApp';
-        }
-      });
-    });
-
-    // Copiar número do Express
-    document.getElementById('btnCopiarExpress')?.addEventListener('click', () => {
-      const numero = '939190649';
-      navigator.clipboard.writeText(numero).then(() => {
-        const btn = document.getElementById('btnCopiarExpress');
-        btn.innerHTML = '✓ Copiado!';
-        btn.style.background = '#22c55e';
-        setTimeout(() => {
-          btn.innerHTML = '📋 Copiar';
-          btn.style.background = '';
-        }, 2000);
-      }).catch(() => alert('Número: 939 190 649'));
-    });
-
-    // Pagar com Express
-    window.pagarComExpress = function () {
-      const numero = '939190649';
-      const input = document.getElementById('inputValorExpress');
-      const valor = input ? input.value.trim() : '';
-      if (!valor || isNaN(valor) || parseInt(valor) <= 0) {
-        if (input) {
-          input.focus();
-          input.style.borderColor = 'red';
-          setTimeout(() => { input.style.borderColor = ''; }, 2000);
-        }
-        return;
-      }
-      const url = `multicaixaexpress://transfer?to=${numero}&amount=${valor}&reference=PALMA`;
-      window.location.href = url;
-      setTimeout(() => {
-        const continuar = confirm(`⚠️ Não foi possível abrir a app Multicaixa Express automaticamente.\n\n📌 Instruções:\n1. Abra a app Multicaixa Express\n2. Transfira para: ${numero}\n3. Valor: ${valor} Kz\n4. Referência: PALMA\n\nClique em OK para enviar o comprovativo pelo WhatsApp`);
-        if (continuar) {
-          window.open(`https://wa.me/244${numero}?text=*COMPROVATIVO%20EXPRESS*%0AValor: ${valor} Kz%0AData: ${new Date().toLocaleDateString('pt-PT')}%0ARef: PALMA`, '_blank');
-        }
-      }, 500);
-    };
-
-    document.getElementById('botaoPagarExpress')?.addEventListener('click', pagarComExpress);
-
-    // Enviar pedido (funciona para ambos os métodos)
     async function enviarPedido() {
       const nome = document.getElementById('campoNomePedido')?.value.trim();
       const telefone = document.getElementById('campTelefonePedido')?.value.trim();
@@ -1717,18 +1409,7 @@
       if (!nome) return alert('📝 Preencha o seu nome');
       if (!telefone) return alert('📱 Preencha o seu WhatsApp');
 
-      let pagamento = '';
-      if (metodoPagamentoAtual === 'express') {
-        const valor = document.getElementById('inputValorExpress')?.value.trim();
-        if (!valor || isNaN(valor) || parseInt(valor) <= 0) {
-          alert('💳 Por favor, preencha o valor para pagamento com Multicaixa Express');
-          document.getElementById('inputValorExpress')?.focus();
-          return;
-        }
-        pagamento = `💳 Multicaixa Express (${valor} Kz)`;
-      } else {
-        pagamento = '💬 WhatsApp (Contra entrega)';
-      }
+      const pagamento = '💬 WhatsApp (Contra entrega)';
 
       const msg = `*PEDIDO PALMA IOGURTES*%0A%0A*Nome:* ${nome}%0A*WhatsApp:* ${telefone}%0A*Cidade:* ${cidade || '-'}%0A*Produto:* ${produto}%0A*Sabores:* ${sabores || 'Multifrutas'}%0A*Quantidade:* ${quantidade || '-'}%0A*Pagamento:* ${pagamento}%0A*Observações:* ${observacoes || '-'}`;
       window.open(`https://wa.me/244939190649?text=${msg}`, '_blank');
@@ -1736,7 +1417,7 @@
 
     document.getElementById('botaoEnviarPedido')?.addEventListener('click', enviarPedido);
 
-    // ========== GALERIA DE FOTOS ==========
+    // ========== GALERIA DE FOTOS DA EQUIPA ==========
     let galeriaImagens = [];
 
     function carregarGaleriaImagens() {
@@ -1745,12 +1426,9 @@
       items.forEach((item, index) => {
         const img = item.querySelector('img');
         if (img) {
-          let legenda = img.getAttribute('alt') || 'Equipa Palma Iogurtes';
-          const textElem = item.querySelector('.gitem-info-novo p');
-          if (textElem) legenda = textElem.textContent;
           galeriaImagens.push({
             src: img.src,
-            legenda: legenda
+            legenda: img.getAttribute('data-legenda') || 'Equipa Palma Iogurtes'
           });
         }
       });
@@ -1871,7 +1549,6 @@
       if (menu?.classList.contains('aberto')) menu.classList.remove('aberto');
     }
 
-    // ========== EVENTOS ==========
     document.querySelectorAll('[data-pagina]').forEach(el => el.addEventListener('click', (e) => { e.preventDefault(); const pg = el.dataset.pagina; if (pg) mudarPagina(pg); }));
     document.getElementById('gatilhoLogoInicio')?.addEventListener('click', (e) => { e.preventDefault(); mudarPagina('inicio'); });
     document.getElementById('botaoPublicarOpiniao')?.addEventListener('click', publicarOpiniao);
